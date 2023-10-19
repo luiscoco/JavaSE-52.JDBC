@@ -148,11 +148,9 @@ public class MySQLExample {
 }
 ```
 
-### IMPORTANT NOTE: download
+### IMPORTANT NOTE: download the MySQL JDBC driver
 
-you need to download the MySQL JDBC driver and include it in your project.
-
-Here are the steps to fix it:
+You need to download the MySQL JDBC driver and include it in your project.
 
 Download the MySQL Connector/J JDBC driver from the official MySQL website: MySQL Connector/J.
 
