@@ -148,9 +148,39 @@ public class MySQLExample {
 }
 ```
 
+### IMPORTANT NOTE: download
+
+you need to download the MySQL JDBC driver and include it in your project.
+
+Here are the steps to fix it:
+
+Download the MySQL Connector/J JDBC driver from the official MySQL website: MySQL Connector/J.
+
+https://dev.mysql.com/downloads/connector/j/
+
+Select operating system -> Platform independent
+
+Once downloaded, extract the contents of the ZIP file. You will find a JAR file named something like mysql-connector-java-x.x.x.jar (the version number may vary).
+
+Move the mysql-connector-java-x.x.x.jar file to a location in your project, for example, a lib folder.
+
+### How to run the application in VSCode
+
+Open a terminal window in VSCode and run the commands:
+
+
+
 # JDBC with NoSQL (MongoDB)
 
 For NoSQL databases like MongoDB, you typically use a driver specific to that database. In this case, let's use the MongoDB Java driver.
+
+```
+PS C:\javatest\FirstProject> javac -cp lib/mysql-connector-j-8.1.0.jar src/MySQLExample.java
+```
+
+```
+PS C:\javatest\FirstProject> java -cp "src;lib/mysql-connector-j-8.1.0.jar" MySQLExample
+```
 
 ### Step 1: Import MongoDB Driver
 
