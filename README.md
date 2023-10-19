@@ -158,6 +158,8 @@ https://dev.mysql.com/downloads/connector/j/
 
 Select operating system -> Platform independent
 
+![image](https://github.com/luiscoco/JavaSE-52.JDBC/assets/32194879/4b87766f-dab7-4582-a7ac-2638f5a0eb88)
+
 Once downloaded, extract the contents of the ZIP file. You will find a JAR file named something like mysql-connector-java-x.x.x.jar (the version number may vary).
 
 Move the mysql-connector-java-x.x.x.jar file to a location in your project, for example, a lib folder.
