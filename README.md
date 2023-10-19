@@ -172,12 +172,6 @@ Move the mysql-connector-java-x.x.x.jar file to a location in your project, for 
 
 Open a terminal window in VSCode and run the commands:
 
-
-
-# JDBC with NoSQL (MongoDB)
-
-For NoSQL databases like MongoDB, you typically use a driver specific to that database. In this case, let's use the MongoDB Java driver.
-
 ```
 PS C:\javatest\FirstProject> javac -cp lib/mysql-connector-j-8.1.0.jar src/MySQLExample.java
 ```
@@ -185,6 +179,10 @@ PS C:\javatest\FirstProject> javac -cp lib/mysql-connector-j-8.1.0.jar src/MySQL
 ```
 PS C:\javatest\FirstProject> java -cp "src;lib/mysql-connector-j-8.1.0.jar" MySQLExample
 ```
+
+# JDBC with NoSQL (MongoDB)
+
+For NoSQL databases like MongoDB, you typically use a driver specific to that database. In this case, let's use the MongoDB Java driver.
 
 ### Step 1: Import MongoDB Driver
 
