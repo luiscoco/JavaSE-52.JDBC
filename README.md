@@ -62,7 +62,7 @@ First create the MySQL docker container
 Running MySQL Docker Container
 
 ```bash
-docker run -d --name mysql-container -p 3306:3306 -e MYSQL_ROOT_PASSWORD=yourpassword -e MYSQL_DATABASE=yourdatabase -e MYSQL_USER=yourusername -e MYSQL_PASSWORD=yourpassword mysql:latest
+docker run -d --name mysql-container -p 3307:3306 -e MYSQL_ROOT_PASSWORD=1234 -e MYSQL_DATABASE=luisprueba -e MYSQL_USER=luiscoco -e MYSQL_PASSWORD=1234 mysql:latest
 ```
 Explanation:
 
