@@ -4,58 +4,7 @@ JDBC, which stands for Java Database Connectivity, is a Java-based API that allo
 
 I'll provide you with a brief overview and examples for both SQL and NoSQL databases.
 
-# 1. JDBC with SQL (Relational Database)
-
-### Step 1: Import JDBC Packages
-
-```java
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
-import java.sql.ResultSet;
-```
-
-### Step 2: Connect to the Database
-
-```java
-// JDBC URL, username, and password of MySQL server
-String url = "jdbc:mysql://localhost:3306/yourdatabase";
-String user = "yourusername";
-String password = "yourpassword";
-
-// Establish a connection
-Connection connection = DriverManager.getConnection(url, user, password);
-```
-
-### Step 3: Execute SQL Queries
-
-```java
-// Create a SQL statement
-Statement statement = connection.createStatement();
-
-// Execute a query
-ResultSet resultSet = statement.executeQuery("SELECT * FROM yourtable");
-
-// Process the result set
-while (resultSet.next()) {
-    // Retrieve data from the result set
-    String column1 = resultSet.getString("column1");
-    int column2 = resultSet.getInt("column2");
-
-    // Do something with the data
-    System.out.println("Column 1: " + column1 + ", Column 2: " + column2);
-}
-```
-
-### Step 4: Close the Connection
-```java
-// Close the result set, statement, and connection
-resultSet.close();
-statement.close();
-connection.close();
-```
-
-# 2. SUMMARY: HOW TO CREATE A JDBC with SQL (Relational Database) WITH A DOCKER MYSQL CONTAINER
+# 1. HOW TO CREATE A JDBC with SQL (Relational Database) WITH A DOCKER MYSQL CONTAINER
 
 First create the MySQL docker container
 
@@ -180,12 +129,12 @@ PS C:\javatest\FirstProject> javac -cp lib/mysql-connector-j-8.1.0.jar src/MySQL
 PS C:\javatest\FirstProject> java -cp "src;lib/mysql-connector-j-8.1.0.jar" MySQLExample
 ```
 
-# 3. SUMMARY: HOW TO CREATE A JDBC with SQL (Relational Database) WITH A MYSQL WORKBENCH ALREADY INSTALLED IN YOUR LOCAL COMPUTER
+# 2. HOW TO CREATE A JDBC with SQL (Relational Database) WITH A MYSQL WORKBENCH ALREADY INSTALLED IN YOUR LOCAL COMPUTER
 
 
 
 
-# 4. JDBC with NoSQL (MongoDB)
+# 3. JDBC with NoSQL (MongoDB)
 
 For NoSQL databases like MongoDB, you typically use a driver specific to that database. In this case, let's use the MongoDB Java driver.
 
