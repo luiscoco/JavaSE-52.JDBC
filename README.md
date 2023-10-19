@@ -164,6 +164,10 @@ Once downloaded, extract the contents of the ZIP file. You will find a JAR file 
 
 Move the mysql-connector-java-x.x.x.jar file to a location in your project, for example, a lib folder.
 
+![image](https://github.com/luiscoco/JavaSE-52.JDBC/assets/32194879/c9c00145-fad2-4a0d-88f9-f195ba83f8eb)
+
+![image](https://github.com/luiscoco/JavaSE-52.JDBC/assets/32194879/0c30c642-1f97-42b1-a601-5c54e95ff620)
+
 ### How to run the application in VSCode
 
 Open a terminal window in VSCode and run the commands:
