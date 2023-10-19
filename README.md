@@ -4,7 +4,7 @@ JDBC, which stands for Java Database Connectivity, is a Java-based API that allo
 
 I'll provide you with a brief overview and examples for both SQL and NoSQL databases.
 
-# JDBC with SQL (Relational Database)
+# 1. JDBC with SQL (Relational Database)
 
 ### Step 1: Import JDBC Packages
 
@@ -55,7 +55,7 @@ statement.close();
 connection.close();
 ```
 
-# SUMMARY: HOW TO CREATE A JDBC with SQL (Relational Database) WITH A DOCKER MYSQL CONTAINER
+# 2. SUMMARY: HOW TO CREATE A JDBC with SQL (Relational Database) WITH A DOCKER MYSQL CONTAINER
 
 First create the MySQL docker container
 
@@ -180,12 +180,12 @@ PS C:\javatest\FirstProject> javac -cp lib/mysql-connector-j-8.1.0.jar src/MySQL
 PS C:\javatest\FirstProject> java -cp "src;lib/mysql-connector-j-8.1.0.jar" MySQLExample
 ```
 
-# SUMMARY: HOW TO CREATE A JDBC with SQL (Relational Database) WITH A MYSQL WORKBENCH ALREADY INSTALLED IN YOUR LOCAL COMPUTER
+# 3. SUMMARY: HOW TO CREATE A JDBC with SQL (Relational Database) WITH A MYSQL WORKBENCH ALREADY INSTALLED IN YOUR LOCAL COMPUTER
 
 
 
 
-# JDBC with NoSQL (MongoDB)
+# 4. JDBC with NoSQL (MongoDB)
 
 For NoSQL databases like MongoDB, you typically use a driver specific to that database. In this case, let's use the MongoDB Java driver.
 
