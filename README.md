@@ -70,7 +70,7 @@ Explanation:
 
 --name mysql-container: Names the container as mysql-container.
 
--p 3306:3306: Maps port 3306 on your machine to port 3306 in the container.
+-p 3307:3306: Maps port 3307 on your machine to port 3306 in the container.
 
 -e MYSQL_ROOT_PASSWORD=yourpassword: Sets the root password for MySQL.
 
@@ -92,9 +92,9 @@ public class MySQLExample {
 
             // Step 2: Connect to the Database
             // JDBC URL, username, and password of MySQL server
-            String url = "jdbc:mysql://localhost:3306/";
-            String user = "yourusername";
-            String password = "yourpassword";
+            String url = "jdbc:mysql://localhost:3307/";
+            String user = "luiscoco";
+            String password = "1234";
 
             // Establish a connection
             Connection connection = DriverManager.getConnection(url, user, password);
