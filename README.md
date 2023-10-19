@@ -55,7 +55,7 @@ statement.close();
 connection.close();
 ```
 
-### Summary
+# SUMMARY: HOW TO CREATE A JDBC with SQL (Relational Database) WITH A DOCKER MYSQL CONTAINER
 
 First create the MySQL docker container
 
@@ -179,6 +179,11 @@ PS C:\javatest\FirstProject> javac -cp lib/mysql-connector-j-8.1.0.jar src/MySQL
 ```
 PS C:\javatest\FirstProject> java -cp "src;lib/mysql-connector-j-8.1.0.jar" MySQLExample
 ```
+
+# SUMMARY: HOW TO CREATE A JDBC with SQL (Relational Database) WITH A MYSQL WORKBENCH ALREADY INSTALLED IN YOUR LOCAL COMPUTER
+
+
+
 
 # JDBC with NoSQL (MongoDB)
 
