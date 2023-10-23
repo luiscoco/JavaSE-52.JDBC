@@ -138,7 +138,7 @@ PS C:\javatest\FirstProject> java -cp "src;lib/mysql-connector-j-8.1.0.jar" MySQ
 
 To run MongoDB in a Docker container and create a database along with the modifications you requested, follow these steps:
 
-## Run MongoDB in a Docker Container:
+## Run MongoDB in a Docker Container
 
 Ensure you have Docker installed on your machine.
 
@@ -152,7 +152,7 @@ This command pulls the official MongoDB image from Docker Hub and runs it in det
 
 The container is named my-mongodb.
 
-## Java Code:
+## Java Code
 
 Now, let's modify the Java code to create a new database and use the Docker container's IP address.
 
@@ -201,11 +201,56 @@ public class MongoDBExample {
 
 Note that we changed the database name to "mydatabase" and assumed the Docker container is running on localhost.
 
-## Run the Java Code:
+## MongoDB Java Driver JAR
+
+If you are not using Gradle or Maven, you can manually download the MongoDB Java Driver JAR file from the official Maven Repository or MongoDB's official website, 
+
+and then include it in your project's classpath.
+
+Here are the steps:
+
+Download MongoDB Java Driver:
+
+Visit the MongoDB Java Driver page on the official Maven Repository: MongoDB Java Driver - Maven Repository
+
+https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver
+
+Choose the version you want, click on the JAR file link, and download the JAR file.
+
+Include JAR in Your Project:
+
+Place the downloaded JAR file in a directory within your project (e.g., a lib directory).
+
+Add JAR to Classpath:
+
+Depending on your development environment, you'll need to add the JAR to your project's classpath. Here are a couple of common methods:
+
+Command Line:
+
+If you're compiling and running your Java program from the command line, you can use the -cp option to include the JAR in the classpath.
+
+```bash
+javac -cp .:path/to/mongo-java-driver-x.x.x.jar YourJavaFile.java
+java -cp .:path/to/mongo-java-driver-x.x.x.jar YourJavaFile
+```
+
+IDE (e.g., Eclipse, IntelliJ):
+
+In your IDE, there should be an option to add external JARs to your project. Look for the project settings or build path options and add the MongoDB Java Driver JAR.
+
+Write and Run Your Java Code:
+
+Now, you can write your Java code that uses the MongoDB Java Driver and run it.
+
+Remember to replace path/to/mongo-java-driver-x.x.x.jar with the actual path to the JAR file you downloaded.
+
+While using build tools like Maven or Gradle is often more convenient, these manual steps should work if you prefer to manage dependencies manually or if your project has specific constraints.
+
+## Run the Java Code
 
 Compile and run the modified Java code. It should connect to the MongoDB Docker container, create a new database, insert a document, and query it back.
 
-## Clean Up:
+## Clean Up
 
 After you're done, you can stop and remove the MongoDB Docker container:
 
