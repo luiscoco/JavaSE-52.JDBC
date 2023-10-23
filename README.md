@@ -136,54 +136,81 @@ PS C:\javatest\FirstProject> java -cp "src;lib/mysql-connector-j-8.1.0.jar" MySQ
 
 # 3. JDBC with NoSQL (MongoDB)
 
-For NoSQL databases like MongoDB, you typically use a driver specific to that database. In this case, let's use the MongoDB Java driver.
+To run MongoDB in a Docker container and create a database along with the modifications you requested, follow these steps:
 
-### Step 1: Import MongoDB Driver
+## Run MongoDB in a Docker Container:
+
+Ensure you have Docker installed on your machine.
+
+Open a terminal and run the following command to start a MongoDB container:
+
+```bash
+docker run -d -p 27017:27017 --name my-mongodb mongo
+```
+
+This command pulls the official MongoDB image from Docker Hub and runs it in detached mode (-d) with port mapping (-p 27017:27017). 
+
+The container is named my-mongodb.
+
+## Java Code:
+
+Now, let's modify the Java code to create a new database and use the Docker container's IP address.
 
 ```java
-import com.mongodb.client.MongoClient;
-import com.mongodb.client.MongoClients;
+import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
-```
 
-### Step 2: Connect to MongoDB
+public class MongoDBExample {
+    public static void main(String[] args) {
+        // Connect to MongoDB server (assuming it's running in a Docker container on localhost)
+        try (MongoClient mongoClient = new MongoClient("localhost", 27017)) {
 
-```java
-Copy code
-// Connect to MongoDB server
-MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017");
+            // Create a new database named "mydatabase"
+            MongoDatabase database = mongoClient.getDatabase("mydatabase");
+            System.out.println("Database created successfully!");
 
-// Access a database
-MongoDatabase database = mongoClient.getDatabase("yourmongodb");
+            // Get a collection (similar to a table in relational databases)
+            MongoCollection<Document> collection = database.getCollection("mycollection");
 
-// Access a collection
-MongoCollection<Document> collection = database.getCollection("yourcollection");
-```
+            // Insert a document
+            Document document = new Document("name", "John Doe")
+                    .append("age", 30)
+                    .append("city", "New York");
 
-### Step 3: Perform Operations
+            collection.insertOne(document);
+            System.out.println("Document inserted successfully!");
 
-```java
-Copy code
-// Insert a document
-Document document = new Document("key1", "value1")
-                    .append("key2", 123);
-collection.insertOne(document);
+            // Query the document
+            Document query = new Document("name", "John Doe");
+            Document result = collection.find(query).first();
 
-// Query documents
-MongoCursor<Document> cursor = collection.find().iterator();
-while (cursor.hasNext()) {
-    Document resultDoc = cursor.next();
-    // Process the document
-    System.out.println(resultDoc.toJson());
+            if (result != null) {
+                System.out.println("Query result: " + result.toJson());
+            } else {
+                System.out.println("Document not found.");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
 ```
 
-### Step 4: Close the Connection
+Note that we changed the database name to "mydatabase" and assumed the Docker container is running on localhost.
 
-```java
-// Close the MongoDB connection
-mongoClient.close();
+## Run the Java Code:
+
+Compile and run the modified Java code. It should connect to the MongoDB Docker container, create a new database, insert a document, and query it back.
+
+## Clean Up:
+
+After you're done, you can stop and remove the MongoDB Docker container:
+
+```bash
+docker stop my-mongodb
+docker rm my-mongodb
 ```
+Now you have a complete example that not only interacts with MongoDB using Java but also creates a new database and runs MongoDB in a Docker container.
