@@ -213,7 +213,7 @@ Download MongoDB Java Driver:
 
 Visit the MongoDB Java Driver page on the official Maven Repository: MongoDB Java Driver - Maven Repository
 
-https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver
+https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-sync
 
 Choose the version you want, click on the JAR file link, and download the JAR file.
 
