@@ -109,9 +109,6 @@ Select operating system -> Platform independent
 
 ![image](https://github.com/luiscoco/JavaSE-52.JDBC/assets/32194879/4b87766f-dab7-4582-a7ac-2638f5a0eb88)
 
-![image](https://github.com/luiscoco/JavaSE-52.JDBC/assets/32194879/a4f9d405-b00c-4fdf-ae06-679176049171)
-
-
 Once downloaded, extract the contents of the ZIP file. You will find a JAR file named something like mysql-connector-java-x.x.x.jar (the version number may vary).
 
 Move the mysql-connector-java-x.x.x.jar file to a location in your project, for example, a lib folder.
@@ -217,6 +214,8 @@ Download MongoDB Java Driver:
 Visit the MongoDB Java Driver page on the official Maven Repository: MongoDB Java Driver - Maven Repository
 
 https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-sync
+
+![image](https://github.com/luiscoco/JavaSE-52.JDBC/assets/32194879/a4f9d405-b00c-4fdf-ae06-679176049171)
 
 Choose the version you want, click on the JAR file link, and download the JAR file.
 
