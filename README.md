@@ -217,6 +217,8 @@ https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-sync
 
 ![image](https://github.com/luiscoco/JavaSE-52.JDBC/assets/32194879/a4f9d405-b00c-4fdf-ae06-679176049171)
 
+![image](https://github.com/luiscoco/JavaSE-52.JDBC/assets/32194879/c484c295-9325-4cde-811d-eb754a6efa75)
+
 Choose the version you want, click on the JAR file link, and download the JAR file.
 
 Include JAR in Your Project:
